@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+  	 <script>
+  	 	var a = 100;
+      function check(t1)
+      {
+        t1 = 300;
+      }
+      check(a);
+      console.log(a);
+      //Object is pass by reference
+      var emp = {
+        name : "mohan",
+        age : 21
+      }
+      function check(t1)
+      {
+        t1.name = "Mohan Kumar";
+        t1.age = 45;
+       }
+      check(emp);
+      console.log("The emp object is", emp);
+
+      //array is also a pass by reference
+      var arr = [23, 34, 55, 78];
+      function test(t2)
+      {
+        t2.push(300);
+        t2.push(23);
+      }
+      test(arr);
+      console.log(arr);
+
+      //another scenario of array
+      var arr4 = [3,5,6];
+      function result(s1)
+      {
+        s1 = [];
+        s1.push(45);
+        console.log(s1);
+      }
+
+     result(arr4);
+     console.log(arr4);
+
+
+     // typeof function
+     function show()
+     {
+      
+     }
+     console.log("the type of show is ", typeof show);
+
+     //Internally function is an object
+
+     function add(t1,t2)
+     {
+        console.log("the sum is", (t1 + t2));
+     }
+     add(3,4);
+     add(6,7,8,9,3,2,1);
+
+     //Function should be such that it can work with any number of arguments
+     //arguments.length is property of function object
+
+     function add2()
+     {
+       console.log("The arguments length", arguments.length);
+       var sum = 0;
+       for(var i = 0;i < arguments.length; i++)
+       {
+        sum = sum + arguments[i];
+       }
+       console.log("the sum is", sum);
+     }
+
+     add2(4,5,6);
+     add2(3,6,6,7,8,5,9,4,3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	 </script>
+  </head>
+  <body>
+  </body>
+</html>
